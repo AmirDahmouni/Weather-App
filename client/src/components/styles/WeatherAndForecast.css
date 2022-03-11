@@ -1,0 +1,32 @@
+.WeatherAndForecast {
+    display: flex;
+    flex-direction: column;
+    color: #f2f2f2;
+    padding: 25px;
+    margin-top: 10px;
+  }
+
+  h1{
+    font-size: 1.1rem;
+    margin: 5px;
+  }
+  
+  .WeatherAndForecast__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+  }
+
+
+  
+  div span {
+    display: block;
+    margin-left: 15px;
+  }
+
+  
+  @media (max-width: 375px) {
+    .WeatherAndForecast {
+      padding: 2rem;
+    }
+  }
