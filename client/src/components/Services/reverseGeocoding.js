@@ -1,18 +1,10 @@
 import axios from "axios";
 
 async function getAddressOfCoordinates(lat, lng) {
-  const response = await axios.get(
-    "https://api.opencagedata.com/geocode/v1/json? ",
-    {
-      params: {
-        key: "103fda4edfee402fa23d1d1e4d742132",
-        q: `${lat}+${lng}`,
-        language: "en"
-      }
-    }
-  );
 
-  return response;
+  const response = await axios.post("http://localhost:5000/coordinations/getAdressBycoords",{lat,lng});
+  return response; 
+  
 }
 
 export default getAddressOfCoordinates;

@@ -15,7 +15,6 @@ export default function Current({ weatherInfo, date,coordinates }) {
 
   
   const movefavoris=async()=>{
-    console.log(context.locationInfo)
     if(favoris==true)
    {
       

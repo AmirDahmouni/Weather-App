@@ -4,6 +4,8 @@ const config = require("config");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes=require("./routes/userRoutes")
+const weatherRoutes=require("./routes/weatherRoutes")
+const coordinationsRoutes=require("./routes/coordinatesRoutes")
 
 app.enable("trust proxy");
 app.use(cors({ origin: `http://localhost:3000`, credentials: true }));
@@ -19,7 +21,9 @@ mongoose.connect(config.get("db"), {
     .catch(() => console.log(`failed coonection to ${config.get("db")}`));
 
 
-app.use("/user",userRoutes);
+app.use("/user",userRoutes)
+app.use("/weather",weatherRoutes)
+app.use("/coordinations",coordinationsRoutes)
   
 
 const server = app.listen(config.get("port"), () =>console.log(`listening on port ${config.get("port")}...`));

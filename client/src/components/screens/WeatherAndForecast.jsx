@@ -39,7 +39,7 @@ function WeatherAndForecast({coordinates}) {
     ];
   }
 
-  return (
+  return ( 
     <div className="WeatherAndForecast">
       <Weather weatherInfo={context.weatherAndForecastInfo} coordinates={coordinates}  date={date[0]} />
       <div className="WeatherAndForecast__container">
